@@ -1,8 +1,8 @@
-import sys
-
 """
 Just another `calculator` yet
 """
+
+import sys
 
 
 def addition(first, second):
@@ -58,9 +58,8 @@ def interact():
         return multiplication(first, second)
     if operation == "/":
         return division(first, second)
-    else:
-        print("Somthing wrong - fallback!")
-        sys.exit(1)
+    print("Somthing wrong - fallback!")
+    sys.exit(1)
 
 
 if __name__ == '__main__':
