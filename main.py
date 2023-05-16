@@ -1,15 +1,8 @@
-import math
+import sys
 
 """
 Just another `calculator` yet
 """
-
-'''
-addition
-subtraction — вычитание
-multiplication — умножение
-division
-'''
 
 
 def addition(first, second):
@@ -59,15 +52,15 @@ def interact():
 
     if operation == "+":
         return addition(first, second)
-    elif operation == "-":
+    if operation == "-":
         return subtraction(first, second)
-    elif operation == "*":
+    if operation == "*":
         return multiplication(first, second)
-    elif operation == "/":
+    if operation == "/":
         return division(first, second)
     else:
         print("Somthing wrong - fallback!")
-        exit(1)
+        sys.exit(1)
 
 
 if __name__ == '__main__':
