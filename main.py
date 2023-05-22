@@ -18,7 +18,7 @@ def subtraction(first, second):
     """
     :param first: int or float
     :param second: int or float
-    :return:
+    :return: subtraction of the second from first
     """
     return first - second
 
@@ -27,7 +27,7 @@ def multiplication(first, second):
     """
     :param first: int or float
     :param second: int or float
-    :return:
+    :return: multiplication of the first and second
     """
     return first * second
 
@@ -36,14 +36,14 @@ def division(first, second):
     """
     :param first: int or float
     :param second: int or float
-    :return:
+    :return: division of the first by second
     """
     return first / second
 
 
 def interact():
     """
-    :return:
+    :return: result of calculation
     """
     print("Enter digit and choice operation type")
     first = float(input("Write first: "))
