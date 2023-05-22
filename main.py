@@ -3,6 +3,18 @@ Just another `calculator` yet
 """
 
 import sys
+import argparse
+
+
+parser = argparse.ArgumentParser(
+                    prog='Calculator',
+                    description='Calculation tool',
+                    epilog='Just for fun')
+
+
+parser.add_argument('-first')
+parser.add_argument('-operation')
+parser.add_argument('-second')
 
 
 def addition(first, second):
@@ -62,5 +74,20 @@ def interact():
     sys.exit(1)
 
 
+def clirun(first, operation, second):
+    if str(args.operation) == "+":
+        return addition(first, second)
+    if str(args.operation) == "-":
+        return subtraction(first, second)
+    if str(args.operation) == "*":
+        return multiplication(first, second)
+    if str(args.operation) == "/":
+        return division(first, second)
+
+
 if __name__ == '__main__':
-    print(interact())
+    args = parser.parse_args()
+    if len(sys.argv) == 1:
+        print(interact())
+    else:
+        print(clirun(float(args.first), str(args.operation), float(args.second)))
