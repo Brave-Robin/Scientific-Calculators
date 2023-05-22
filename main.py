@@ -90,6 +90,7 @@ def clirun(first, operation, second):
         return multiplication(first, second)
     if operation == "/":
         return division(first, second)
+    return None
 
 
 if __name__ == '__main__':
