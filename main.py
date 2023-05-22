@@ -9,12 +9,13 @@ import argparse
 parser = argparse.ArgumentParser(
                     prog='Calculator',
                     description='Calculation tool',
-                    epilog='Just for fun')
+                    epilog='Just for fun, to code with friends')
 
 
-parser.add_argument('-first')
-parser.add_argument('-operation')
-parser.add_argument('-second')
+parser.add_argument('-first', help="The first number")
+parser.add_argument('-operation', help="The math operation")
+parser.add_argument('-second', help="The second number")
+parser.add_argument('--version', action='version', version='%(prog)s 0.1-alpha')
 
 
 def addition(first, second):
@@ -80,7 +81,7 @@ def clirun(first, operation, second):
     :param first: int or float
     :param operation: int or float
     :param second: operation like a '+', '-', '/', or '*'
-    :return:
+    :return: result of calculation
     """
     if operation == "+":
         return addition(first, second)
