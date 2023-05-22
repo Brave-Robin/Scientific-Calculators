@@ -75,13 +75,20 @@ def interact():
 
 
 def clirun(first, operation, second):
-    if str(args.operation) == "+":
+    """
+    CLI format for tool
+    :param first: int or float
+    :param operation: int or float
+    :param second: operation like a '+', '-', '/', or '*'
+    :return:
+    """
+    if operation == "+":
         return addition(first, second)
-    if str(args.operation) == "-":
+    if operation == "-":
         return subtraction(first, second)
-    if str(args.operation) == "*":
+    if operation == "*":
         return multiplication(first, second)
-    if str(args.operation) == "/":
+    if operation == "/":
         return division(first, second)
 
 
